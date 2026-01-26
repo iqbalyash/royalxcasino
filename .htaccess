@@ -1,0 +1,145 @@
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+
+# BEGIN Security Hardening
+# Disable XML-RPC
+<Files xmlrpc.php>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Block wp-admin brute force attacks
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Limit wp-login.php access
+RewriteCond %{REQUEST_METHOD} POST
+RewriteCond %{REQUEST_URI} ^(.*)wp-login\.php(.*)$
+RewriteCond %{HTTP_REFERER} !^https?://(.*)?yourdomain\.com [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^$
+RewriteRule ^(.*)$ - [F,L]
+
+# Block access to wp-admin for non-logged-in users (optional - uncomment if needed)
+# RewriteCond %{REQUEST_URI} ^(.*)wp-admin(.*)$
+# RewriteCond %{REMOTE_ADDR} !^YOUR_IP_ADDRESS$
+# RewriteRule ^(.*)$ - [F,L]
+</IfModule>
+
+# Protect wp-content directory
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Block direct access to PHP files in wp-content/uploads
+RewriteRule ^wp-content/uploads/.*\.php$ - [F,L]
+
+# Block access to sensitive files in wp-content
+RewriteRule ^wp-content/(.*)\.php$ - [F,L]
+RewriteCond %{REQUEST_URI} !^/wp-content/themes/
+RewriteCond %{REQUEST_URI} !^/wp-content/plugins/
+RewriteRule ^wp-content/(.*)$ - [F,L]
+</IfModule>
+
+# Block access to sensitive files
+<FilesMatch "^(wp-config\.php|\.htaccess|\.htpasswd|readme\.html|license\.txt|wp-config-sample\.php|wp-admin/install\.php|wp-admin/upgrade\.php|xmlrpc\.php)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to readme and license files
+<FilesMatch "^(readme\.html|license\.txt|wp-config-sample\.php)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to wp-includes
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+</IfModule>
+
+# Block suspicious query strings
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{QUERY_STRING} \.\.\/ [NC,OR]
+RewriteCond %{QUERY_STRING} boot\.ini [NC,OR]
+RewriteCond %{QUERY_STRING} tag\= [NC,OR]
+RewriteCond %{QUERY_STRING} ftp\: [NC,OR]
+RewriteCond %{QUERY_STRING} http\: [NC,OR]
+RewriteCond %{QUERY_STRING} https\: [NC,OR]
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+RewriteRule ^(.*)$ - [F,L]
+</IfModule>
+
+# Block bad user agents
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+RewriteCond %{HTTP_USER_AGENT} ^(java|curl|wget|python|nikto|scan) [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} (<|>|'|%0A|%0D|%27|%3C|%3E|%00) [NC]
+RewriteRule ^(.*)$ - [F,L]
+</IfModule>
+# END Security Hardening
+
+# Security Headers (Recommended for VPS)
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# PHP 8.1+ Settings
+<IfModule mod_php8.c>
+    php_value upload_max_filesize 64M
+    php_value post_max_size 64M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+</IfModule>
+
+# Disable directory browsing
+Options -Indexes
+
+# Protect wp-config.php (already in Security Hardening section above)
+# Additional protection
+<Files wp-config.php>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Protect .htaccess
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Protect .env file
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
