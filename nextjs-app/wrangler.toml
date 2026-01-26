@@ -1,0 +1,10 @@
+# Cloudflare Pages configuration for Next.js 16
+name = "royal-x-casino"
+compatibility_date = "2026-01-26"
+pages_build_output_dir = "out"
+
+[env.production]
+compatibility_date = "2026-01-26"
+
+# Note: This file is for reference. Cloudflare Pages will use the build output directory
+# specified in the Pages dashboard settings. For static export, the output is in the "out" directory.
