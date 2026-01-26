@@ -1,0 +1,10 @@
+# Cloudflare Pages configuration
+# This file tells Cloudflare Pages how to build and deploy
+
+[build]
+command = "npm run build"
+output_directory = "out"
+root_directory = "nextjs-app"
+
+[build.environment_variables]
+NODE_VERSION = "20"
