@@ -1,0 +1,11 @@
+{
+  // Cloudflare Pages static assets configuration
+  // This file helps Cloudflare Pages understand where the static files are
+  "name": "royal-x-casino",
+  "compatibility_date": "2026-01-26",
+  "pages_build_output_dir": "out",
+  // This tells Cloudflare to use the static assets directory
+  "assets": {
+    "directory": "./out"
+  }
+}

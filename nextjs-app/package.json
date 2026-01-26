@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "build:cloudflare": "next build",
+    "build:pages": "npm run build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prebuild": "echo 'Building for Cloudflare Pages (not Workers)'"
   },
   "dependencies": {
     "next": "^16.0.0",
