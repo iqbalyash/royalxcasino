@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'online casino Pakistan, real money games Pakistan, skill-based casino games, mobile casino Pakistan, Royal X Casino',
   authors: [{ name: 'Royal X Casino Team' }],
   icons: {
-    icon: favicon,
+    icon: favicon.src,
   },
   openGraph: {
     title: 'Royal X Casino | Online Gaming Platform in Pakistan',
