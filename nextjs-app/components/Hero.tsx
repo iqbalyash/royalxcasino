@@ -15,8 +15,9 @@ export default function Hero() {
             Get Started
           </a>
           <p className="hero-subtitle" style={{ marginTop: '1rem' }}>
-            Experience the thrill of skill-based online games with a modern
-            digital entertainment platform designed for players in Pakistan.
+            Download the Royal X Casino game APK, register your account, and
+            log in to start playing secure, skill-based casino-style games
+            designed for players in Pakistan.
           </p>
           <ul className="hero-features">
             <li>

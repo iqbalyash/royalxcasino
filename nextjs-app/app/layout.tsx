@@ -5,9 +5,9 @@ import favicon from './royal-x-casino.png'
 export const metadata: Metadata = {
   title: 'Royal X Casino | Online Gaming Platform in Pakistan',
   description:
-    'Royal X Casino is a trusted online gaming platform in Pakistan for secure, skill-based casino-style games, fast payouts, and a smooth mobile experience.',
+    'Download the Royal X Casino game APK, register or log in within minutes, and start playing secure, skill-based casino-style games with fast payouts on mobile and desktop in Pakistan.',
   keywords:
-    'online casino Pakistan, real money games Pakistan, skill-based casino games, mobile casino Pakistan, Royal X Casino',
+    'Royal X Casino game, Royal X Casino APK download, online casino Pakistan, register Royal X Casino, Royal X Casino login, real money games Pakistan, skill-based casino games, mobile casino Pakistan, casino app download Pakistan',
   authors: [{ name: 'Royal X Casino Team' }],
   icons: {
     icon: favicon.src,

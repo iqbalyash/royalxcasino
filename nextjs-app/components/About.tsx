@@ -7,10 +7,11 @@ export default function About() {
         </header>
         <div className="section-content">
           <p>
-            We are a digital entertainment platform created for users who enjoy
-            strategy-based and entertainment-focused games. Our goal is to
-            provide a smooth, user-friendly environment while promoting
-            responsible gaming.
+            Royal X Casino is a digital entertainment and casino-style gaming
+            platform where players in Pakistan can register, log in, and enjoy
+            strategy-based and skill-focused games. Our goal is to provide a
+            smooth, mobile-optimized experience whether you access the game
+            through your browser or download the APK.
           </p>
           <ul className="about-features">
             <li>Fair gameplay mechanics</li>

@@ -5,8 +5,9 @@ export default function CTA() {
         <div className="cta-content">
           <h2 className="cta-title">Ready to Explore Royal X Casino?</h2>
           <p className="cta-description">
-            Discover a modern digital entertainment platform built for speed,
-            performance, and entertainment in Pakistan.
+            Discover a modern casino-style game experience built for speed,
+            performance, and fun in Pakistan. Download the Royal X Casino APK
+            or register and log in online to start playing today.
           </p>
           <div className="cta-buttons">
             <a
