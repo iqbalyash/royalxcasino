@@ -6,6 +6,14 @@ export default function Hero() {
           <h1 className="hero-title">
             Royal X Casino – Premium Online Gaming Experience in Pakistan
           </h1>
+          <a
+            href="https://royalxcasino55.com/?refer_id=101202282045"
+            className="btn btn-primary btn-large hero-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Started
+          </a>
           <p className="hero-subtitle">
             Experience the thrill of skill-based online games with a modern
             digital entertainment platform designed for players in Pakistan.
@@ -27,14 +35,6 @@ export default function Hero() {
               gameplay
             </li>
           </ul>
-          <a
-            href="https://royalxcasino55.com/?refer_id=101202282045"
-            className="btn btn-primary btn-large"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Get Started
-          </a>
         </div>
       </div>
     </section>

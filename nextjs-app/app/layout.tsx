@@ -3,12 +3,15 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Royal X Casino | Online Gaming Platform in Pakistan',
-  description: 'Royal X Casino is a modern online gaming platform in Pakistan offering skill-based games, mobile-friendly gameplay, and a secure user experience.',
-  keywords: 'online gaming, Pakistan, skill-based games, mobile gaming, digital entertainment, Royal X Casino',
+  description:
+    'Royal X Casino is a trusted online gaming platform in Pakistan for secure, skill-based casino-style games, fast payouts, and a smooth mobile experience.',
+  keywords:
+    'online casino Pakistan, real money games Pakistan, skill-based casino games, mobile casino Pakistan, Royal X Casino',
   authors: [{ name: 'Royal X Casino Team' }],
   openGraph: {
     title: 'Royal X Casino | Online Gaming Platform in Pakistan',
-    description: 'Royal X Casino is a modern online gaming platform in Pakistan offering skill-based games, mobile-friendly gameplay, and a secure user experience.',
+    description:
+      'Play secure, skill-based online casino-style games at Royal X Casino, a modern gaming platform for players in Pakistan with mobile-friendly design and fast payouts.',
     type: 'website',
     url: 'https://royal-x-casino.com',
     siteName: 'Royal X Casino',
@@ -16,7 +19,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Royal X Casino | Online Gaming Platform in Pakistan',
-    description: 'Royal X Casino is a modern online gaming platform in Pakistan offering skill-based games, mobile-friendly gameplay, and a secure user experience.',
+    description:
+      'Discover Royal X Casino, Pakistan’s online gaming platform for secure, skill-based games with a smooth mobile experience and exciting bonuses.',
     site: '@royalxcasino',
   },
   verification: {
