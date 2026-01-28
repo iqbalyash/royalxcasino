@@ -14,6 +14,7 @@ export default function Hero() {
           >
             Get Started
           </a>
+          <br />
           <p className="hero-subtitle">
             Experience the thrill of skill-based online games with a modern
             digital entertainment platform designed for players in Pakistan.
