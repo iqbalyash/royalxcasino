@@ -36,6 +36,11 @@ export default function FAQ() {
       answer:
         'We prioritize user safety and security. We implement industry-standard security measures including SSL encryption to protect your personal information and data. Secure protocols are used for all transactions and interactions. We also promote responsible gaming practices and provide tools to help users maintain control over their gaming activities.',
     },
+    {
+      question: 'What deposit and withdrawal options does Royal X Casino offer?',
+      answer:
+        'Royal X Casino supports multiple convenient and locally preferred payment methods for players in Pakistan, including JazzCash, EasyPaisa, local bank transfers, and USDT (Tether). JazzCash and EasyPaisa allow fast mobile deposits and withdrawals directly from your digital wallet, while bank transfer is ideal for larger amounts and users who prefer using their bank account. For crypto users, USDT offers faster processing, lower fees, and an extra layer of privacy when managing your funds.',
+    },
   ]
 
   const toggleFAQ = (index: number) => {

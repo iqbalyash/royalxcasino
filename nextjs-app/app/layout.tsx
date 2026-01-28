@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import favicon from './royal-x-casino.png'
 
 export const metadata: Metadata = {
   title: 'Royal X Casino | Online Gaming Platform in Pakistan',
@@ -8,6 +9,9 @@ export const metadata: Metadata = {
   keywords:
     'online casino Pakistan, real money games Pakistan, skill-based casino games, mobile casino Pakistan, Royal X Casino',
   authors: [{ name: 'Royal X Casino Team' }],
+  icons: {
+    icon: favicon,
+  },
   openGraph: {
     title: 'Royal X Casino | Online Gaming Platform in Pakistan',
     description:
