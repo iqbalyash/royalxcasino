@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "build:cloudflare": "npm run build",
     "build:pages": "npm run build",
     "prebuild": "echo 'Building for Cloudflare Pages'",
