@@ -285,7 +285,9 @@ img {
    ============================================ */
 
 .hero-section {
-    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 50%, var(--bg-secondary) 100%);
+    background:
+        linear-gradient(135deg, rgba(10, 10, 15, 0.95) 0%, rgba(26, 26, 46, 0.9) 50%, rgba(20, 20, 32, 0.95) 100%),
+        url('/royal-x-casino.png') center center / cover no-repeat;
     color: var(--text-primary);
     padding: 6rem 0;
     text-align: center;
