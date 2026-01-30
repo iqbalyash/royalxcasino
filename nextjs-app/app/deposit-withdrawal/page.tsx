@@ -38,7 +38,15 @@ export default function DepositWithdrawalPage() {
                     and withdrawals, allowing users to add or withdraw funds
                     directly from their mobile wallet without visiting a bank.
                     Processing is typically instant for deposits and within 24
-                    hours for withdrawals.
+                    hours for withdrawals.{' '}
+                    <a
+                      href="https://jazzcash.com.pk"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      style={{ color: 'var(--gold-primary)' }}
+                    >
+                      Visit JazzCash
+                    </a>
                   </p>
                 </article>
                 <article className="game-card">
@@ -49,7 +57,15 @@ export default function DepositWithdrawalPage() {
                     Users can deposit and withdraw funds using their EasyPaisa
                     account, offering a quick and user-friendly experience,
                     especially for mobile users. Transactions are processed
-                    quickly, making it ideal for immediate deposits.
+                    quickly, making it ideal for immediate deposits.{' '}
+                    <a
+                      href="https://easypaisa.com.pk"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      style={{ color: 'var(--gold-primary)' }}
+                    >
+                      Visit EasyPaisa
+                    </a>
                   </p>
                 </article>
                 <article className="game-card">
@@ -71,7 +87,17 @@ export default function DepositWithdrawalPage() {
                     prefer digital currency. USDT transactions offer faster
                     processing times, lower transaction fees, and additional
                     privacy. This option is ideal for users familiar with
-                    crypto-based payments.
+                    crypto-based payments. You can manage your crypto wallet
+                    through platforms like{' '}
+                    <a
+                      href="https://binance.com"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      style={{ color: 'var(--gold-primary)' }}
+                    >
+                      Binance
+                    </a>
+                    .
                   </p>
                 </article>
               </div>

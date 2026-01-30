@@ -36,6 +36,9 @@ export default function Footer() {
                   <li>
                     <Link href="/responsible-gaming">Responsible Gaming</Link>
                   </li>
+                  <li>
+                    <Link href="/sitemap-page">Sitemap</Link>
+                  </li>
                 </ul>
               </div>
               <div className="footer-link-group">
